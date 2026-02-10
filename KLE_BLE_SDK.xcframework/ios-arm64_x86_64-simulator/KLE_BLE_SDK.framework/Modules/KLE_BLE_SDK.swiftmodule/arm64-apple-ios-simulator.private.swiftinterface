@@ -1,0 +1,57 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios18.5-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name KLE_BLE_SDK
+// swift-module-flags-ignorable:  -interface-compiler-version 6.1.2
+import CoreBluetooth
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum ZenLockCommand : Swift.Hashable {
+  case ignitionOn
+  case ignitionOff
+  case immobilizeOn
+  case immobilizeOff
+  public static func == (a: KLE_BLE_SDK.ZenLockCommand, b: KLE_BLE_SDK.ZenLockCommand) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class KLEManager : ObjectiveC.NSObject {
+  public static let shared: KLE_BLE_SDK.KLEManager
+  weak final public var delegate: (any KLE_BLE_SDK.KLEManagerDelegate)?
+  final public func startScan(deviceName: Swift.String)
+  final public func stopScanning()
+  final public func startTrip()
+  final public func endTrip()
+  final public func sendCommand(_ command: KLE_BLE_SDK.ZenLockCommand)
+  @objc deinit
+}
+extension KLE_BLE_SDK.KLEManager : CoreBluetooth.CBCentralManagerDelegate {
+  @objc final public func centralManagerDidUpdateState(_ central: CoreBluetooth.CBCentralManager)
+  @objc final public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDiscover peripheral: CoreBluetooth.CBPeripheral, advertisementData: [Swift.String : Any], rssi RSSI: Foundation.NSNumber)
+  @objc final public func centralManager(_ central: CoreBluetooth.CBCentralManager, didConnect peripheral: CoreBluetooth.CBPeripheral)
+  @objc final public func centralManager(_ central: CoreBluetooth.CBCentralManager, didFailToConnect peripheral: CoreBluetooth.CBPeripheral, error: (any Swift.Error)?)
+  @objc final public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDisconnectPeripheral peripheral: CoreBluetooth.CBPeripheral, error: (any Swift.Error)?)
+}
+extension KLE_BLE_SDK.KLEManager : CoreBluetooth.CBPeripheralDelegate {
+  @objc final public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverServices error: (any Swift.Error)?)
+  @objc final public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverCharacteristicsFor service: CoreBluetooth.CBService, error: (any Swift.Error)?)
+  @objc final public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didWriteValueFor characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
+}
+public struct ZenLockDevice : Swift.Identifiable {
+  public let id: Foundation.UUID
+  public let name: Swift.String
+  public let rssi: Swift.Int
+  public typealias ID = Foundation.UUID
+}
+@_Concurrency.MainActor public protocol KLEManagerDelegate : AnyObject {
+  @_Concurrency.MainActor func onTargetDeviceFound(device: KLE_BLE_SDK.ZenLockDevice)
+  @_Concurrency.MainActor func onDeviceConnected()
+  @_Concurrency.MainActor func onDeviceDisconnected()
+  @_Concurrency.MainActor func onError(error: Swift.String)
+  @_Concurrency.MainActor func onScanTimeOut()
+  @_Concurrency.MainActor func onCommandSent()
+}
