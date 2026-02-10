@@ -8,6 +8,20 @@ import Swift
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+public struct ZenLockDevice : Swift.Identifiable {
+  public let id: Foundation.UUID
+  public let name: Swift.String
+  public let rssi: Swift.Int
+  public typealias ID = Foundation.UUID
+}
+@_Concurrency.MainActor public protocol KLEManagerDelegate : AnyObject {
+  @_Concurrency.MainActor func onTargetDeviceFound(device: KLE_BLE_SDK.ZenLockDevice)
+  @_Concurrency.MainActor func onDeviceConnected()
+  @_Concurrency.MainActor func onDeviceDisconnected()
+  @_Concurrency.MainActor func onError(error: Swift.String)
+  @_Concurrency.MainActor func onScanTimeOut()
+  @_Concurrency.MainActor func onCommandSent()
+}
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class KLEManager : ObjectiveC.NSObject {
   public static let shared: KLE_BLE_SDK.KLEManager
   weak final public var delegate: (any KLE_BLE_SDK.KLEManagerDelegate)?
@@ -29,20 +43,8 @@ extension KLE_BLE_SDK.KLEManager : CoreBluetooth.CBPeripheralDelegate {
   @objc final public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverServices error: (any Swift.Error)?)
   @objc final public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverCharacteristicsFor service: CoreBluetooth.CBService, error: (any Swift.Error)?)
   @objc final public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didWriteValueFor characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
-}
-public struct ZenLockDevice : Swift.Identifiable {
-  public let id: Foundation.UUID
-  public let name: Swift.String
-  public let rssi: Swift.Int
-  public typealias ID = Foundation.UUID
-}
-@_Concurrency.MainActor public protocol KLEManagerDelegate : AnyObject {
-  @_Concurrency.MainActor func onTargetDeviceFound(device: KLE_BLE_SDK.ZenLockDevice)
-  @_Concurrency.MainActor func onDeviceConnected()
-  @_Concurrency.MainActor func onDeviceDisconnected()
-  @_Concurrency.MainActor func onError(error: Swift.String)
-  @_Concurrency.MainActor func onScanTimeOut()
-  @_Concurrency.MainActor func onCommandSent()
+  @objc final public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateValueFor characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
+  @objc final public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateNotificationStateFor characteristic: CoreBluetooth.CBCharacteristic, error: (any Swift.Error)?)
 }
 public enum ZenLockCommand : Swift.Hashable {
   case ignitionOn

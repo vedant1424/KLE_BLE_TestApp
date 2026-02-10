@@ -13,6 +13,389 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "ZenLockDevice",
+        "printedName": "ZenLockDevice",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UUID",
+                "printedName": "Foundation.UUID",
+                "usr": "s:10Foundation4UUIDV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11KLE_BLE_SDK13ZenLockDeviceV2id10Foundation4UUIDVvp",
+            "mangledName": "$s11KLE_BLE_SDK13ZenLockDeviceV2id10Foundation4UUIDVvp",
+            "moduleName": "KLE_BLE_SDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UUID",
+                    "printedName": "Foundation.UUID",
+                    "usr": "s:10Foundation4UUIDV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11KLE_BLE_SDK13ZenLockDeviceV2id10Foundation4UUIDVvg",
+                "mangledName": "$s11KLE_BLE_SDK13ZenLockDeviceV2id10Foundation4UUIDVvg",
+                "moduleName": "KLE_BLE_SDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11KLE_BLE_SDK13ZenLockDeviceV4nameSSvp",
+            "mangledName": "$s11KLE_BLE_SDK13ZenLockDeviceV4nameSSvp",
+            "moduleName": "KLE_BLE_SDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11KLE_BLE_SDK13ZenLockDeviceV4nameSSvg",
+                "mangledName": "$s11KLE_BLE_SDK13ZenLockDeviceV4nameSSvg",
+                "moduleName": "KLE_BLE_SDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rssi",
+            "printedName": "rssi",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11KLE_BLE_SDK13ZenLockDeviceV4rssiSivp",
+            "mangledName": "$s11KLE_BLE_SDK13ZenLockDeviceV4rssiSivp",
+            "moduleName": "KLE_BLE_SDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11KLE_BLE_SDK13ZenLockDeviceV4rssiSivg",
+                "mangledName": "$s11KLE_BLE_SDK13ZenLockDeviceV4rssiSivg",
+                "moduleName": "KLE_BLE_SDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:11KLE_BLE_SDK13ZenLockDeviceV",
+        "mangledName": "$s11KLE_BLE_SDK13ZenLockDeviceV",
+        "moduleName": "KLE_BLE_SDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Identifiable",
+            "printedName": "Identifiable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ID",
+                "printedName": "ID",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UUID",
+                    "printedName": "Foundation.UUID",
+                    "usr": "s:10Foundation4UUIDV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12IdentifiableP",
+            "mangledName": "$ss12IdentifiableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "KLEManagerDelegate",
+        "printedName": "KLEManagerDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "onTargetDeviceFound",
+            "printedName": "onTargetDeviceFound(device:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ZenLockDevice",
+                "printedName": "KLE_BLE_SDK.ZenLockDevice",
+                "usr": "s:11KLE_BLE_SDK13ZenLockDeviceV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11KLE_BLE_SDK18KLEManagerDelegateP19onTargetDeviceFound6deviceyAA07ZenLockH0V_tF",
+            "mangledName": "$s11KLE_BLE_SDK18KLEManagerDelegateP19onTargetDeviceFound6deviceyAA07ZenLockH0V_tF",
+            "moduleName": "KLE_BLE_SDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : KLE_BLE_SDK.KLEManagerDelegate>",
+            "sugared_genericSig": "<Self where Self : KLE_BLE_SDK.KLEManagerDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onDeviceConnected",
+            "printedName": "onDeviceConnected()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11KLE_BLE_SDK18KLEManagerDelegateP17onDeviceConnectedyyF",
+            "mangledName": "$s11KLE_BLE_SDK18KLEManagerDelegateP17onDeviceConnectedyyF",
+            "moduleName": "KLE_BLE_SDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : KLE_BLE_SDK.KLEManagerDelegate>",
+            "sugared_genericSig": "<Self where Self : KLE_BLE_SDK.KLEManagerDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onDeviceDisconnected",
+            "printedName": "onDeviceDisconnected()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11KLE_BLE_SDK18KLEManagerDelegateP20onDeviceDisconnectedyyF",
+            "mangledName": "$s11KLE_BLE_SDK18KLEManagerDelegateP20onDeviceDisconnectedyyF",
+            "moduleName": "KLE_BLE_SDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : KLE_BLE_SDK.KLEManagerDelegate>",
+            "sugared_genericSig": "<Self where Self : KLE_BLE_SDK.KLEManagerDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onError",
+            "printedName": "onError(error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11KLE_BLE_SDK18KLEManagerDelegateP7onError5errorySS_tF",
+            "mangledName": "$s11KLE_BLE_SDK18KLEManagerDelegateP7onError5errorySS_tF",
+            "moduleName": "KLE_BLE_SDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : KLE_BLE_SDK.KLEManagerDelegate>",
+            "sugared_genericSig": "<Self where Self : KLE_BLE_SDK.KLEManagerDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onScanTimeOut",
+            "printedName": "onScanTimeOut()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11KLE_BLE_SDK18KLEManagerDelegateP13onScanTimeOutyyF",
+            "mangledName": "$s11KLE_BLE_SDK18KLEManagerDelegateP13onScanTimeOutyyF",
+            "moduleName": "KLE_BLE_SDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : KLE_BLE_SDK.KLEManagerDelegate>",
+            "sugared_genericSig": "<Self where Self : KLE_BLE_SDK.KLEManagerDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onCommandSent",
+            "printedName": "onCommandSent()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11KLE_BLE_SDK18KLEManagerDelegateP13onCommandSentyyF",
+            "mangledName": "$s11KLE_BLE_SDK18KLEManagerDelegateP13onCommandSentyyF",
+            "moduleName": "KLE_BLE_SDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : KLE_BLE_SDK.KLEManagerDelegate>",
+            "sugared_genericSig": "<Self where Self : KLE_BLE_SDK.KLEManagerDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:11KLE_BLE_SDK18KLEManagerDelegateP",
+        "mangledName": "$s11KLE_BLE_SDK18KLEManagerDelegateP",
+        "moduleName": "KLE_BLE_SDK",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "Custom",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "KLE_BLE_SDK"
+      },
+      {
+        "kind": "TypeDecl",
         "name": "ZenLockCommand",
         "printedName": "ZenLockCommand",
         "children": [
@@ -983,6 +1366,106 @@
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "peripheral",
+            "printedName": "peripheral(_:didUpdateValueFor:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBPeripheral",
+                "printedName": "CoreBluetooth.CBPeripheral",
+                "usr": "c:objc(cs)CBPeripheral"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBCharacteristic",
+                "printedName": "CoreBluetooth.CBCharacteristic",
+                "usr": "c:objc(cs)CBCharacteristic"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any Swift.Error)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@KLE_BLE_SDK@objc(cs)KLEManager(im)peripheral:didUpdateValueForCharacteristic:error:",
+            "mangledName": "$s11KLE_BLE_SDK10KLEManagerC10peripheral_17didUpdateValueFor5errorySo12CBPeripheralC_So16CBCharacteristicCs5Error_pSgtF",
+            "moduleName": "KLE_BLE_SDK",
+            "objc_name": "peripheral:didUpdateValueForCharacteristic:error:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "peripheral",
+            "printedName": "peripheral(_:didUpdateNotificationStateFor:error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBPeripheral",
+                "printedName": "CoreBluetooth.CBPeripheral",
+                "usr": "c:objc(cs)CBPeripheral"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBCharacteristic",
+                "printedName": "CoreBluetooth.CBCharacteristic",
+                "usr": "c:objc(cs)CBCharacteristic"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any Swift.Error)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@KLE_BLE_SDK@objc(cs)KLEManager(im)peripheral:didUpdateNotificationStateForCharacteristic:error:",
+            "mangledName": "$s11KLE_BLE_SDK10KLEManagerC10peripheral_29didUpdateNotificationStateFor5errorySo12CBPeripheralC_So16CBCharacteristicCs5Error_pSgtF",
+            "moduleName": "KLE_BLE_SDK",
+            "objc_name": "peripheral:didUpdateNotificationStateForCharacteristic:error:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -1066,389 +1549,6 @@
             "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "KLE_BLE_SDK"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "ZenLockDevice",
-        "printedName": "ZenLockDevice",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "id",
-            "printedName": "id",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "UUID",
-                "printedName": "Foundation.UUID",
-                "usr": "s:10Foundation4UUIDV"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11KLE_BLE_SDK13ZenLockDeviceV2id10Foundation4UUIDVvp",
-            "mangledName": "$s11KLE_BLE_SDK13ZenLockDeviceV2id10Foundation4UUIDVvp",
-            "moduleName": "KLE_BLE_SDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UUID",
-                    "printedName": "Foundation.UUID",
-                    "usr": "s:10Foundation4UUIDV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11KLE_BLE_SDK13ZenLockDeviceV2id10Foundation4UUIDVvg",
-                "mangledName": "$s11KLE_BLE_SDK13ZenLockDeviceV2id10Foundation4UUIDVvg",
-                "moduleName": "KLE_BLE_SDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "name",
-            "printedName": "name",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11KLE_BLE_SDK13ZenLockDeviceV4nameSSvp",
-            "mangledName": "$s11KLE_BLE_SDK13ZenLockDeviceV4nameSSvp",
-            "moduleName": "KLE_BLE_SDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11KLE_BLE_SDK13ZenLockDeviceV4nameSSvg",
-                "mangledName": "$s11KLE_BLE_SDK13ZenLockDeviceV4nameSSvg",
-                "moduleName": "KLE_BLE_SDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "rssi",
-            "printedName": "rssi",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:11KLE_BLE_SDK13ZenLockDeviceV4rssiSivp",
-            "mangledName": "$s11KLE_BLE_SDK13ZenLockDeviceV4rssiSivp",
-            "moduleName": "KLE_BLE_SDK",
-            "declAttributes": [
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isLet": true,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:11KLE_BLE_SDK13ZenLockDeviceV4rssiSivg",
-                "mangledName": "$s11KLE_BLE_SDK13ZenLockDeviceV4rssiSivg",
-                "moduleName": "KLE_BLE_SDK",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          }
-        ],
-        "declKind": "Struct",
-        "usr": "s:11KLE_BLE_SDK13ZenLockDeviceV",
-        "mangledName": "$s11KLE_BLE_SDK13ZenLockDeviceV",
-        "moduleName": "KLE_BLE_SDK",
-        "declAttributes": [
-          "AccessControl"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Identifiable",
-            "printedName": "Identifiable",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "ID",
-                "printedName": "ID",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UUID",
-                    "printedName": "Foundation.UUID",
-                    "usr": "s:10Foundation4UUIDV"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:s12IdentifiableP",
-            "mangledName": "$ss12IdentifiableP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "KLEManagerDelegate",
-        "printedName": "KLEManagerDelegate",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "onTargetDeviceFound",
-            "printedName": "onTargetDeviceFound(device:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "ZenLockDevice",
-                "printedName": "KLE_BLE_SDK.ZenLockDevice",
-                "usr": "s:11KLE_BLE_SDK13ZenLockDeviceV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11KLE_BLE_SDK18KLEManagerDelegateP19onTargetDeviceFound6deviceyAA07ZenLockH0V_tF",
-            "mangledName": "$s11KLE_BLE_SDK18KLEManagerDelegateP19onTargetDeviceFound6deviceyAA07ZenLockH0V_tF",
-            "moduleName": "KLE_BLE_SDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : KLE_BLE_SDK.KLEManagerDelegate>",
-            "sugared_genericSig": "<Self where Self : KLE_BLE_SDK.KLEManagerDelegate>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "onDeviceConnected",
-            "printedName": "onDeviceConnected()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11KLE_BLE_SDK18KLEManagerDelegateP17onDeviceConnectedyyF",
-            "mangledName": "$s11KLE_BLE_SDK18KLEManagerDelegateP17onDeviceConnectedyyF",
-            "moduleName": "KLE_BLE_SDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : KLE_BLE_SDK.KLEManagerDelegate>",
-            "sugared_genericSig": "<Self where Self : KLE_BLE_SDK.KLEManagerDelegate>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "onDeviceDisconnected",
-            "printedName": "onDeviceDisconnected()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11KLE_BLE_SDK18KLEManagerDelegateP20onDeviceDisconnectedyyF",
-            "mangledName": "$s11KLE_BLE_SDK18KLEManagerDelegateP20onDeviceDisconnectedyyF",
-            "moduleName": "KLE_BLE_SDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : KLE_BLE_SDK.KLEManagerDelegate>",
-            "sugared_genericSig": "<Self where Self : KLE_BLE_SDK.KLEManagerDelegate>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "onError",
-            "printedName": "onError(error:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11KLE_BLE_SDK18KLEManagerDelegateP7onError5errorySS_tF",
-            "mangledName": "$s11KLE_BLE_SDK18KLEManagerDelegateP7onError5errorySS_tF",
-            "moduleName": "KLE_BLE_SDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : KLE_BLE_SDK.KLEManagerDelegate>",
-            "sugared_genericSig": "<Self where Self : KLE_BLE_SDK.KLEManagerDelegate>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "onScanTimeOut",
-            "printedName": "onScanTimeOut()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11KLE_BLE_SDK18KLEManagerDelegateP13onScanTimeOutyyF",
-            "mangledName": "$s11KLE_BLE_SDK18KLEManagerDelegateP13onScanTimeOutyyF",
-            "moduleName": "KLE_BLE_SDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : KLE_BLE_SDK.KLEManagerDelegate>",
-            "sugared_genericSig": "<Self where Self : KLE_BLE_SDK.KLEManagerDelegate>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "onCommandSent",
-            "printedName": "onCommandSent()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:11KLE_BLE_SDK18KLEManagerDelegateP13onCommandSentyyF",
-            "mangledName": "$s11KLE_BLE_SDK18KLEManagerDelegateP13onCommandSentyyF",
-            "moduleName": "KLE_BLE_SDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : KLE_BLE_SDK.KLEManagerDelegate>",
-            "sugared_genericSig": "<Self where Self : KLE_BLE_SDK.KLEManagerDelegate>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:11KLE_BLE_SDK18KLEManagerDelegateP",
-        "mangledName": "$s11KLE_BLE_SDK18KLEManagerDelegateP",
-        "moduleName": "KLE_BLE_SDK",
-        "genericSig": "<τ_0_0 : AnyObject>",
-        "sugared_genericSig": "<Self : AnyObject>",
-        "declAttributes": [
-          "AccessControl",
-          "Custom",
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          }
-        ]
       }
     ],
     "json_format_version": 8
@@ -1513,35 +1613,35 @@
     {
       "filePath": "\/Users\/vedant\/Desktop\/ZenithraTech\/KLE-BLE-SDK\/Sources\/KLE-BLE-SDK\/KLEManager.swift",
       "kind": "StringLiteral",
-      "offset": 875,
+      "offset": 927,
       "length": 6,
-      "value": "\"1234\""
+      "value": "\"9211\""
     },
     {
       "filePath": "\/Users\/vedant\/Desktop\/ZenithraTech\/KLE-BLE-SDK\/Sources\/KLE-BLE-SDK\/KLEManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 926,
+      "offset": 978,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vedant\/Desktop\/ZenithraTech\/KLE-BLE-SDK\/Sources\/KLE-BLE-SDK\/KLEManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 971,
+      "offset": 1023,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vedant\/Desktop\/ZenithraTech\/KLE-BLE-SDK\/Sources\/KLE-BLE-SDK\/KLEManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1142,
+      "offset": 1194,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/vedant\/Desktop\/ZenithraTech\/KLE-BLE-SDK\/Sources\/KLE-BLE-SDK\/KLEManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1194,
+      "offset": 1246,
       "length": 2,
       "value": "10"
     }

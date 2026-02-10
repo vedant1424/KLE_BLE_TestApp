@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6FD3EAA22F3B02AF0033E79F /* KLE_BLE_SDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD3EAA02F3B02740033E79F /* KLE_BLE_SDK.xcframework */; };
-		6FD3EAA32F3B02AF0033E79F /* KLE_BLE_SDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD3EAA02F3B02740033E79F /* KLE_BLE_SDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6FD3EAFD2F3B31640033E79F /* KLE_BLE_SDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD3EAFB2F3B31460033E79F /* KLE_BLE_SDK.xcframework */; };
+		6FD3EAFE2F3B31640033E79F /* KLE_BLE_SDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD3EAFB2F3B31460033E79F /* KLE_BLE_SDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +29,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		6FD3EA9F2F3AFF430033E79F /* Embed Frameworks */ = {
+		6FD3EAE02F3B2B0A0033E79F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6FD3EAA32F3B02AF0033E79F /* KLE_BLE_SDK.xcframework in Embed Frameworks */,
+				6FD3EAFE2F3B31640033E79F /* KLE_BLE_SDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,7 +46,7 @@
 		6FB49DDE2F370622005CC606 /* KLESDK-TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KLESDK-TestApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB49DED2F370624005CC606 /* KLESDK-TestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KLESDK-TestAppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB49DF72F370624005CC606 /* KLESDK-TestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KLESDK-TestAppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6FD3EAA02F3B02740033E79F /* KLE_BLE_SDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = KLE_BLE_SDK.xcframework; sourceTree = "<group>"; };
+		6FD3EAFB2F3B31460033E79F /* KLE_BLE_SDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = KLE_BLE_SDK.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -62,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FD3EAA22F3B02AF0033E79F /* KLE_BLE_SDK.xcframework in Frameworks */,
+				6FD3EAFD2F3B31640033E79F /* KLE_BLE_SDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,8 +86,8 @@
 		6FB49DD52F370622005CC606 = {
 			isa = PBXGroup;
 			children = (
-				6FD3EAA02F3B02740033E79F /* KLE_BLE_SDK.xcframework */,
 				6FB49DE02F370622005CC606 /* KLESDK-TestApp */,
+				6FD3EADD2F3B2B0A0033E79F /* Frameworks */,
 				6FB49DDF2F370622005CC606 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,6 +102,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6FD3EADD2F3B2B0A0033E79F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FD3EAFB2F3B31460033E79F /* KLE_BLE_SDK.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,7 +120,7 @@
 				6FB49DDA2F370622005CC606 /* Sources */,
 				6FB49DDB2F370622005CC606 /* Frameworks */,
 				6FB49DDC2F370622005CC606 /* Resources */,
-				6FD3EA9F2F3AFF430033E79F /* Embed Frameworks */,
+				6FD3EAE02F3B2B0A0033E79F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,9 +131,6 @@
 			);
 			name = "KLESDK-TestApp";
 			packageProductDependencies = (
-				6FB49E532F371B24005CC606 /* KLE-BLE-SDK */,
-				6FB49E552F371CEB005CC606 /* KLE-BLE-SDK */,
-				6FB49E582F371D43005CC606 /* KLE-BLE-SDK */,
 			);
 			productName = "KLESDK-TestApp";
 			productReference = 6FB49DDE2F370622005CC606 /* KLESDK-TestApp.app */;
@@ -570,21 +575,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		6FB49E532F371B24005CC606 /* KLE-BLE-SDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = "KLE-BLE-SDK";
-		};
-		6FB49E552F371CEB005CC606 /* KLE-BLE-SDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = "KLE-BLE-SDK";
-		};
-		6FB49E582F371D43005CC606 /* KLE-BLE-SDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = "KLE-BLE-SDK";
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6FB49DD62F370622005CC606 /* Project object */;
 }
